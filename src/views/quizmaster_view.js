@@ -1,20 +1,20 @@
 const PubSub = require('../helpers/pub_sub.js');
 const RequestHelper = require('../helpers/request_helper.js');
 
-const QuizmasterView = function (container) {
+const QuizMasterView = function (container) {
   this.container = container;
 }
 
-QuizmasterView.prototype.bindEvents = function () {
-  PubSub.subscribe('Quizmaster:quizmaster-loaded', (event) => {
+QuizMasterView.prototype.bindEvents = function () {
+  PubSub.subscribe('QuizMaster:quizMaster-loaded', (event) => {
     this.render(event.detail);
   });
 }
 
-QuizmasterView.prototype.render = function (quizmaster) {
+QuizMasterView.prototype.render = function (quizMaster) {
   const p = document.createElement('p');
-  p.textContent = quizmaster;
+  p.textContent = quizMaster;
   this.container.appendChild(p);
 }
 
-module.exports = QuizmasterView;
+module.exports = QuizMasterView;

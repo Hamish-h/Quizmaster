@@ -4,11 +4,11 @@ const QuizmasterView = require('./views/quizmaster_view.js');
 document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript Loaded')
 
-  const quizmaster = new Quizmaster();
+  const quizMaster = new QuizMaster();
   quizMaster.getData();
 
-  const quizMasterContainer = document.querySelector('div#quizmaster-container');
-  const quizMasterView = new QuizmasterView(quizMasterContainer);
+  const quizMasterContainer = document.querySelector('div#quizMaster-container');
+  const quizMasterView = new QuizMasterView(quizMasterContainer);
   quizMasterView.bindEvents();
 
 })
