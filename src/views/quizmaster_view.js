@@ -1,5 +1,6 @@
 const PubSub = require('../helpers/pub_sub.js');
-const RequestHelper = require('../helpers/request_helper.js');
+const Request = require('../helpers/request_helper.js');
+const QuizMaster = require('../models/quizmaster.js');
 
 const QuizMasterView = function (container) {
   this.container = container;
@@ -14,6 +15,7 @@ QuizMasterView.prototype.bindEvents = function () {
 QuizMasterView.prototype.render = function (quizMaster) {
   const p = document.createElement('p');
   p.textContent = quizMaster;
+//  console.log("quizmaster ",quizMaster);
   this.container.appendChild(p);
 }
 
