@@ -1,0 +1,14 @@
+#quizMaster-container {
+  width: 50%;
+  height: 200vh;
+  margin: auto;
+  text-align: left;
+  display: block;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+#quizMaster-container p {
+  font-family: verdana;
+  font-size: 2em;
+}

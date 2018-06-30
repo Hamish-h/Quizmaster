@@ -1,11 +1,11 @@
 const RequestHelper = require('../helpers/request_helper.js');
 const PubSub = require('../helpers/pub_sub.js');
 
-const Quizmaster = function () {
+const QuizMaster = function () {
   this.text = null;
 }
 // get data
-Quizmaster.prototype.getData = function () {
+QuizMaster.prototype.getData = function () {
   // set the url
   const request = new Request('https://opentdb.com/api.php?amount=50&difficulty=medium&type=multiple');
   // oncomplete
@@ -14,11 +14,12 @@ Quizmaster.prototype.getData = function () {
   // collect and assign data
   this.text - quizMasterData.question;
   // publish it
-  PubSub.publish('Quizmaster:quizMaster-loaded', this.text);
+  PubSub.publish('QuizMaster:quizMaster-loaded', this.text);
 
-};
+});
+}
 // exports
-module.exports = Quizmaster;
+module.exports = QuizMaster;
 
 
 
@@ -29,7 +30,7 @@ module.exports = Quizmaster;
 
 
 //
-// Quizmaster.prototype.getData = function () {
+// QuizMaster.prototype.getData = function () {
 //   // set the url
 //   const request = new Request('https://opentdb.com/api.php?amount=50&difficulty=medium&type=multiple');
 //
@@ -39,10 +40,5 @@ module.exports = Quizmaster;
 //     // collect and assign string
 //     this.text = quizData.quiz;
 //     // publish it
-//     PubSub.publish('Quizmaster:quiz-loaded', this.text);
+//     PubSub.publish('QuizMaster:quiz-loaded', this.text);
 //   });
-
-
-}
-
-module.exports = Quizmaster;
