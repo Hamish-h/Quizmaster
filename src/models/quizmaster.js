@@ -4,8 +4,21 @@ const PubSub = require('../helpers/pub_sub.js');
 const Quizmaster = function () {
   this.text = null;
 }
+// get data
+Quizmaster.prototype.getData = function () {
+  // set the url
+  const request = new Request('https://opentdb.com/api.php?amount=50&difficulty=medium&type=multiple');
+  // oncomplete
+  request.get((quizMasterData) => {
+      console.log(quizMasterData);
+  // collect and assign data
+  this.text - quizMasterData.question;
+  // publish it
+  PubSub.publish('Quizmaster:quizMaster-loaded', this.text);
 
-
+};
+// exports
+module.exports = Quizmaster;
 
 
 
