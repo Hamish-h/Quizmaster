@@ -18,7 +18,7 @@ QuizMaster.prototype.getData = function () {
 
 });
 }
-// exports
+// export
 module.exports = QuizMaster;
 
 

@@ -15,8 +15,8 @@ QuizMasterView.prototype.bindEvents = function () {
 QuizMasterView.prototype.render = function (quizMaster) {
   const p = document.createElement('p');
   p.textContent = quizMaster;
-//  console.log("quizmaster ",quizMaster);
+  console.log("quizmaster ",quizMaster);
   this.container.appendChild(p);
 }
-
+// export
 module.exports = QuizMasterView;
