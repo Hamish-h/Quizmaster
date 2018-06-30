@@ -1,5 +1,5 @@
-const Quizmaster = require('./models/quizmaster.js');
-const QuizmasterView = require('./views/quizmaster_view.js');
+const QuizMaster = require('./models/quizmaster.js');
+const QuizMasterView = require('./views/quizmaster_view.js');
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript Loaded')
