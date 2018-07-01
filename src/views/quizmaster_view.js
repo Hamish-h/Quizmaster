@@ -16,6 +16,7 @@ QuizMasterView.prototype.render = function (quizMaster) {
   const p = document.createElement('p');
   p.textContent = quizMaster;
   this.container.appendChild(p);
+
 }
 // export
 module.exports = QuizMasterView;

@@ -4,7 +4,6 @@ const PubSub = require('../helpers/pub_sub.js');
 const QuizMaster = function () {
   this.text = null;
 }
-
 // get data
 QuizMaster.prototype.getData = function () {
   // set the url
