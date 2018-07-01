@@ -8,11 +8,18 @@
     </script>
   </head>
   <body>
-    <h1>QUIZMASTER</h1>
+    <img src="./images/quiz-time.jpg" alt="quiz-time picture">
     <h2>Questions for Quizmasters</h2>
-    <h3>Multiple choice questions and answers drawn from the Creative Commons open API</h3>
-    <h4>FORMAT: CATEGORY, QUESTION, INCORRECT ANSWERS, CORRECT ANSWER</h4>
+    <h3>Multiple choice questions and answers<br/>drawn from the Creative Commons open API</h3>
+    <h4>CATEGORY<br/>QUESTION<br/>INCORRECT ANSWERS<br/>CORRECT ANSWER</h4>
     <hr/>
     <div id="quizMaster-container"></div>
+    <hr/>
+    <h5>Timer</h5>
+    <center>
+      <progress value="0" max="30" id="timer"></progress>
+      <br/><button class="button" onClick="window.location.reload()">New Question</button>
+    </center>
+    <hr/>
   </body>
 </html>
