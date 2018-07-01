@@ -2,17 +2,23 @@ const Request = require('../helpers/request_helper.js');
 const PubSub = require('../helpers/pub_sub.js');
 
 const QuizMaster = function () {
-  this.text = null;
+  this.text = [null];
+
 }
 // get data
 QuizMaster.prototype.getData = function () {
   // set the url
   const request = new Request('https://opentdb.com/api.php?amount=50&difficulty=medium&type=multiple');
   // oncomplete
-  request.get((quizMasterData) => {
-      console.log(quizMasterData);
+  request.get((data) => {
+
+    console.log("request get results ", data);
+
   // collect and assign data
-  this.text - quizMasterData.question;
+  this.text = data.results;
+
+    console.log("this.text contains ", this.text);
+
   // publish it
   PubSub.publish('QuizMaster:quizMaster-loaded', this.text);
 

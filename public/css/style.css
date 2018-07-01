@@ -1,14 +1,32 @@
+body {
+  background-image: url("../images/quizmaster.jpg");
+  background-color: powderblue;
+}
+h1 {
+    color: blue;
+    text-align: center;
+}
+h2 {
+    color: blue;
+    text-align: center;
+}
+h3 {
+    color: blue;
+    text-align: center;
+}
+
 #quizMaster-container {
   width: 50%;
   height: 200vh;
   margin: auto;
-  text-align: left;
+  text-align: center;
   display: block;
   justify-content: space-around;
   align-items: stretch;
 }
 
 #quizMaster-container p {
+  color: red:
   font-family: verdana;
   font-size: 2em;
 }
