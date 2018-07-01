@@ -19,33 +19,14 @@ QuizMaster.prototype.getData = function () {
   // console.log("this.category", this.category);
   // publish it
   PubSub.publish('QuizMaster:quizMaster-loaded', this.category[0].category);
+
   PubSub.publish('QuizMaster:quizMaster-loaded', this.question[0].question);
+
   PubSub.publish('QuizMaster:quizMaster-loaded', this.incorrect_answers[0].incorrect_answers);
+
   PubSub.publish('QuizMaster:quizMaster-loaded', this.correct_answer[0].correct_answer);
 
 });
 }
 // export
 module.exports = QuizMaster;
-
-
-
-
-
-
-
-
-
-//
-// QuizMaster.prototype.getData = function () {
-//   // set the url
-//   const request = new Request('https://opentdb.com/api.php?amount=50&difficulty=medium&type=multiple');
-//
-//   // function is 'onComplete'
-//   request.get((quizData) => {
-//     console.log(quizData);
-//     // collect and assign string
-//     this.text = quizData.quiz;
-//     // publish it
-//     PubSub.publish('QuizMaster:quiz-loaded', this.text);
-//   });
